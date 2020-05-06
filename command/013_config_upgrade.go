@@ -328,7 +328,7 @@ func (c *ZeroThirteenUpgradeCommand) Run(args []string) int {
 				rp := body.GetAttribute(localName)
 				expr := rp.Expr().BuildTokens(nil)
 
-				// Paritition the tokens into before and after the opening paren
+				// Partition the tokens into before and after the opening brace
 				before, after := partitionTokensAfter(expr, hclsyntax.TokenOBrace)
 
 				// If the value is an empty object, add a newline between the
